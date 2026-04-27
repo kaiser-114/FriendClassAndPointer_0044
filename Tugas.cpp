@@ -9,17 +9,18 @@
 using namespace std;
 
 class BelahKetupat;
+
 class LayangLayang {
     private:
     double d1, d2; // diagonal
     double s1, s2; // sisi
 
     public:
-
     double hitungLuas() {
         return 0.5 * d1 * d2;
     }
-     void inputData() {
+    
+    void inputData() {
         cout << "Input Layang-Layang\n";
         cout << "Diagonal 1 : "; cin >> d1;
         cout << "Diagonal 2 : "; cin >> d2;
@@ -32,11 +33,11 @@ class LayangLayang {
 class BelahKetupat {
     private:
     double d1, d2; // diagonal
-    double sisi; // sisi
+    double sisi;
 
     public:
     void inputData() {
-        cout << "Input Belah Ketupat\n";
+        cout << "\nInput Belah Ketupat\n";
         cout << "Diagonal 1 : "; cin >> d1;
         cout << "Diagonal 2 : "; cin >> d2;
         cout << "Sisi       : "; cin >> sisi;
@@ -44,11 +45,13 @@ class BelahKetupat {
     double hitungLuas() {
         return 0.5 * d1 * d2;
     }
+
     double hitungKeliling() {
-        return 4 * sisi;   
+        return 4 * sisi;
+    }
 };
 
-void tampilkankeliling(LayangLayang &l)
+void tampilkanKeliling(LayangLayang &l)
 {
     cout << "Keliling Layang-Layang : " << 2 * (l.s1 + l.s2) << endl;
 }
@@ -63,7 +66,9 @@ int main() {
     cout << "\n--- Hasil luas ---" << endl;
     cout << "Luas Layang-Layang     : " << ObjectLayang.hitungLuas() << endl;
     cout << "Luas Belah Ketupat     : " <<ObjectBelah.hitungLuas() <<endl;
-    cout << "\n--- Hasil keliling ---" << endl;
-    tampilkankeliling(ObjectLayang);
+    cout << "\n--- Hasil Keliling ---" << endl;
+    tampilkanKeliling(ObjectLayang); 
     cout << "Keliling Belah Ketupat : " << ObjectBelah.hitungKeliling() << endl;
+
+    return 0;
 }
